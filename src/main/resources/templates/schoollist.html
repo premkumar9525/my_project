@@ -1,0 +1,63 @@
+<html>
+<style>
+   table,tr,th,td{border: 1px solid red;
+    
+   }
+</style>
+
+<body>
+<center>
+	<table>
+
+		<tr>
+			<th style="color: blue;">Id</th>
+			<th style="color: blue;">First Name</th>
+			<th style="color: blue;">Last Name</th>
+			<th style="color: blue;">Email</th>
+			<th style="color: blue;">Mobile No</th>
+			<th style="color: blue">Gender</th>
+			<th style="color: blue"> Date Of Birth</th>
+			<th style="color: blue"> Religion</th>
+			<th style="color: blue">Language</th>
+			<th style="color: blue">Residential address </th>
+			<th style="color: blue">Landmark</th>
+			<th style="color: blue"> City</th>
+			<th style="color: blue">Region</th>
+			<th style="color: blue">PinCode</th>
+			<th style="color: blue">Country</th>
+			<th style="color: blue"> Father First Name</th>
+			<th style="color: blue"> Father Last Name</th>
+			<th style="color: blue">Mother First Name</th>
+			<th style="color: blue">Mother Last Name</th>
+			<th style="color: blue">File</th>
+			
+		</tr>
+		<tr th:each="slist:${Schooldata}">
+		
+		<td class="align-middle" th:text="${slist.id}"></td>
+			<td class="align-middle" th:text="${slist.firstName}"></td>
+			<td class="align-middle" th:text="${slist.lastName}"></td>
+			<td class="align-middle" th:text="${slist.email}"></td>
+			<td class="align-middle" th:text="${slist.mobNo}"></td>
+			<td class="align-middle" th:text="${slist.gender}"></td>
+			<td class="align-middle" th:text="${slist.dob}"></td>
+			<td class="align-middle" th:text="${slist.religion}"></td>
+			<td class="align-middle" th:text="${slist.language}"></td>
+			<td class="align-middle" th:text="${slist.address}"></td>
+			<td class="align-middle" th:text="${slist.landmark}"></td>
+			<td class="align-middle" th:text="${slist.city}"></td>
+			<td class="align-middle" th:text="${slist.region}"></td>
+			<td class="align-middle" th:text="${slist.pincode}"></td>
+			<td class="align-middle" th:text="${slist.country}"></td>
+			<td class="align-middle" th:text="${slist.ffirstName}"></td>
+			<td class="align-middle" th:text="${slist.flastName}"></td>
+			<td class="align-middle" th:text="${slist.mfirstName}"></td>
+			<td class="align-middle" th:text="${slist.mlastName}"></td>
+			<td class="align-middle" th:text="${slist.file}"></td>
+			<td><a th:href="@{'editschoolByid/'}+${slist.id}">Edit</a></td>
+			<td><a th:href="@{'deleteschoolById/'}+${slist.id}">Delete</a></td>
+		</tr>
+	</table>
+	</center>
+</body>
+</html>
